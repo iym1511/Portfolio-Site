@@ -217,7 +217,7 @@ export const MyInfo = styled.div`
     width: 94%;
   }
   @media (max-width: 1046px) {
-    width: 900px;
+    width: 940px;
   }
   display: flex;
   justify-content: center;
