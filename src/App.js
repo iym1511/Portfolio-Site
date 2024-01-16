@@ -25,8 +25,8 @@ import { backAry, frontAry } from "./constants/iconList";
 
 function App() {
 
-  const animation = useScrollFadeIn("down", 2, 0);
-  const animation2 = useScrollFadeIn("up", 2, 0);
+  const skillUp1 = useScrollFadeIn("up", 1, 0);
+  const skillUp2 = useScrollFadeIn("up", 1, 0.1);
   const card1 = useScrollFadeIn("left", 1, 0);
   const card2 = useScrollFadeIn("left", 1, 0.5);
   const card3 = useScrollFadeIn("left", 1, 1);
@@ -121,7 +121,7 @@ function App() {
         <h1>🔎 SKILLS</h1>
         <div className="skill-border">
           <b className="front-end">Front-End</b>
-          <div>
+          <div {...skillUp1}>
             {frontAry.map((a, i) => (
               <div className="icon-list">
                 <img src={a.img} />
@@ -132,7 +132,7 @@ function App() {
         </div>
 
         <b className="back-end">Back-End & Version Control</b>
-        <div>
+        <div {...skillUp2}>
           {backAry.map((a, i) => (
             <div className="icon-list">
               <img src={a.img} />
@@ -147,8 +147,6 @@ function App() {
         <Div1 {...card2} id="special"></Div1>
         <Div1 {...card3} id="special"></Div1>
       </CardSection>
-      <h1 {...animation}>포트폴리오 입니다.</h1>
-      <h1 {...animation2}>포트폴리오 입니다.</h1>
 
       <Global styles={globalStyle} />
     </div>

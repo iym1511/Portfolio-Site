@@ -217,7 +217,7 @@ export const MyInfo = styled.div`
   margin: auto;
   /* border: 1px solid red; */
   padding: 50px;
-  padding-top: 190px;
+  padding-top: 9%;
   height: 700px;
   img {
     width: 400px;
@@ -269,25 +269,18 @@ export const Profile = styled.div`
 export const Skill = styled.div`
   width: 1200px;
   margin: auto;
-  @media (max-width: 1326px) {
-    div {
-      /* flex-wrap: wrap; */
-    }
-  }
-  // 1286px 부터 퍼센트 반응형
   @media (max-width: 1286px) {
     width: 94%;
   }
   @media (max-width: 1046px) {
     width: 900px;
   }
-  /* border: 1px solid red; */
   padding: 10px;
-  padding-top: 60px;
+  padding-top: 2%;
   height: 900px;
   .skill-border {
     border-top: 1px solid #161a30;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   h1 {
     margin-bottom: 30px;
@@ -303,7 +296,6 @@ export const Skill = styled.div`
     font-size: 20px;
   }
   div {
-    /* border: 1px solid red; */
     display: flex;
     flex-wrap: wrap;
     img {
@@ -312,8 +304,8 @@ export const Skill = styled.div`
       padding: 20px;
     }
     .icon-list {
-      flex-direction: column; // 세로로 나열
-      align-items: center; // 가운데 정렬
+      flex-direction: column;
+      align-items: center;
       p {
         margin-bottom: 20px;
         color: #161a30;
