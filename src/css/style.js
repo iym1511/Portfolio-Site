@@ -119,28 +119,28 @@ export const H2First = styled.h2`
   -webkit-text-stroke: 2px #b6bbc4;
   font-size: 10em;
   position: absolute;
-  transform: translate(-50%, -200%);
+  transform: translate(-50%, -160%);
 `;
 export const H2First2 = styled.h2`
   color: transparent;
   -webkit-text-stroke: 2px #b6bbc4;
   font-size: 10em;
   position: absolute;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -60%);
 `;
 
 export const H2Second = styled.h2`
   color: #f0ece5;
   font-size: 10em;
   position: absolute;
-  transform: translate(-50%, -200%);
+  transform: translate(-50%, -160%);
   animation: ${animate} 3s ease-in-out infinite;
 `;
 export const H2Second2 = styled.h2`
   color: #f0ece5;
   font-size: 10em;
   position: absolute;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -60%);
   animation: ${animate} 3s ease-in-out infinite;
 `;
 /** ------------------------------------------ */
@@ -201,4 +201,123 @@ export const Circle = styled.div`
     ${(props) => props.x}px,
     ${(props) => props.y}px
   ); // 마우스 위치로 이동합니다.
+`;
+
+export const MyInfo = styled.div`
+  width: 1200px;
+  // 1286px 부터 퍼센트 반응형
+  @media (max-width: 1286px) {
+    width: 94%;
+  }
+  @media (max-width: 1046px) {
+    width: 900px;
+  }
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  /* border: 1px solid red; */
+  padding: 50px;
+  padding-top: 190px;
+  height: 700px;
+  img {
+    width: 400px;
+    height: 550px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+`;
+
+export const Profile = styled.div`
+  margin-left: 50px;
+  color: #161a30;
+  div:nth-child(1) {
+    padding: 15px;
+    h1 {
+      margin-bottom: 20px;
+      span {
+        color: #161a30db;
+        font-size: 25px;
+      }
+    }
+    p {
+      margin-top: 4px;
+      color: #161a30;
+    }
+  }
+  div:nth-child(2) {
+    margin-top: 20px;
+    border-top: 1px solid #161a30;
+    /* width: 80%; */
+    h1,
+    p {
+      padding: 15px;
+      line-height: 1.5;
+    }
+    h1 {
+      span {
+        color: #846f2f;
+      }
+    }
+    p:nth-child(2) {
+      color: #846f2f;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+`;
+
+export const Skill = styled.div`
+  width: 1200px;
+  margin: auto;
+  @media (max-width: 1326px) {
+    div {
+      /* flex-wrap: wrap; */
+    }
+  }
+  // 1286px 부터 퍼센트 반응형
+  @media (max-width: 1286px) {
+    width: 94%;
+  }
+  @media (max-width: 1046px) {
+    width: 900px;
+  }
+  /* border: 1px solid red; */
+  padding: 10px;
+  padding-top: 60px;
+  height: 900px;
+  .skill-border {
+    border-top: 1px solid #161a30;
+    margin-bottom: 60px;
+  }
+  h1 {
+    margin-bottom: 30px;
+    color: #161a30;
+  }
+  .front-end {
+    margin-top: 35px;
+    color: #33699a;
+    font-size: 20px;
+  }
+  .back-end {
+    color: #9a3345;
+    font-size: 20px;
+  }
+  div {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      margin-top: 10px;
+      width: 100px;
+      padding: 20px;
+    }
+    .icon-list {
+      flex-direction: column; // 세로로 나열
+      align-items: center; // 가운데 정렬
+      p {
+        margin-bottom: 20px;
+        color: #161a30;
+      }
+    }
+  }
 `;
