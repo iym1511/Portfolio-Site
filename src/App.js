@@ -28,13 +28,14 @@ function App() {
   const skillUp1 = useScrollFadeIn("up", 1, 0);
   const skillUp2 = useScrollFadeIn("up", 1, 0.1);
   const card1 = useScrollFadeIn("left", 1, 0);
-  const card2 = useScrollFadeIn("left", 1, 0.5);
-  const card3 = useScrollFadeIn("left", 1, 1);
-  const profile = useScrollFadeIn("left", 1, 0);
-  const profile2 = useScrollFadeIn("left", 1, 0.1);
-  const profile3 = useScrollFadeIn("left", 1, 0.2);
+  const card2 = useScrollFadeIn("left", 1, 0.2);
+  const card3 = useScrollFadeIn("left", 1, 0.4);
+  const profile = useScrollFadeIn("right", 1, 0);
+  const profile2 = useScrollFadeIn("right", 1, 0.1);
+  const profile3 = useScrollFadeIn("right", 1, 0.2);
 
   const sectionRefs = {
+    home: useRef(null),
     myInfo: useRef(null),
     skill: useRef(null),
   };
@@ -53,7 +54,7 @@ function App() {
       <Circle ref={circleRef} x={position.x} y={position.y} />
       <NavBar>
         <div>
-          <p>IL YUN</p>
+          <p onClick={() => handleScroll("home")}>IL YUN</p>
         </div>
         <div>
           <p onClick={() => handleScroll("myInfo")}>MY INFO</p>
@@ -63,7 +64,7 @@ function App() {
         </div>
       </NavBar>
       {/* 상단 메인 */}
-      <MainSection>
+      <MainSection ref={sectionRefs.home}>
         <Content>
           <H2First>FrontEnd</H2First>
           <H2Second>FrontEnd</H2Second>

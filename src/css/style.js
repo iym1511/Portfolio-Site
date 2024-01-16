@@ -9,13 +9,15 @@ export const NavBar = styled.nav`
   position: fixed;
   background-color: #161a3000;
   width: 100%;
+  /* backdrop-filter: blur(6px); */
+  z-index: 11;
   div {
     display: flex;
     padding: 20px 50px;
     p {
+      cursor: pointer;
       display: inline-block;
       margin: 0 15px;
-      cursor: pointer;
       padding: 1em 0;
       border-radius: 0;
       color: #f0ece5;
@@ -110,6 +112,7 @@ export const MainSection = styled.section`
   align-items: center;
   justify-content: center;
   background-color: #161a30;
+  z-index: 1;
 `;
 
 export const Content = styled.div`
@@ -208,6 +211,7 @@ export const Circle = styled.div`
 
 export const MyInfo = styled.div`
   width: 1200px;
+  height: 700px;
   // 1286px 부터 퍼센트 반응형
   @media (max-width: 1286px) {
     width: 94%;
@@ -219,9 +223,9 @@ export const MyInfo = styled.div`
   justify-content: center;
   margin: auto;
   /* border: 1px solid red; */
-  padding: 50px;
-  padding-top: 9%;
-  height: 700px;
+  padding: 60px;
+  /* padding-top: 9%; */
+  padding-top: 130px;
   img {
     width: 400px;
     height: 550px;
@@ -245,7 +249,7 @@ export const Profile = styled.div`
     p {
       margin-top: 4px;
       color: #161a30;
-      a{
+      a {
         color: #161a30;
       }
     }
@@ -279,10 +283,11 @@ export const Skill = styled.div`
     width: 94%;
   }
   @media (max-width: 1046px) {
-    width: 900px;
+    width: 800px;
   }
   padding: 10px;
-  padding-top: 5%;
+  /* padding-top: 5%; */
+  padding-top: 70px;
   height: 900px;
   .skill-border {
     border-top: 1px solid #161a30;
@@ -306,7 +311,7 @@ export const Skill = styled.div`
     flex-wrap: wrap;
     img {
       margin-top: 10px;
-      width: 100px;
+      width: 90px;
       padding: 20px;
     }
     .icon-list {
