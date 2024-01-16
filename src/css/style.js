@@ -4,11 +4,14 @@ import styled from "@emotion/styled";
 export const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
-  background-color: #161a30;
+  mix-blend-mode: difference;
   color: #f0ece5;
+  position: fixed;
+  background-color: #161a3000;
+  width: 100%;
   div {
     display: flex;
+    padding: 20px 50px;
     p {
       display: inline-block;
       margin: 0 15px;
@@ -103,7 +106,7 @@ const animate = keyframes`
 
 export const MainSection = styled.section`
   display: flex;
-  min-height: 94vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   background-color: #161a30;
@@ -119,28 +122,28 @@ export const H2First = styled.h2`
   -webkit-text-stroke: 2px #b6bbc4;
   font-size: 10em;
   position: absolute;
-  transform: translate(-50%, -160%);
+  transform: translate(-50%, -120%);
 `;
 export const H2First2 = styled.h2`
   color: transparent;
   -webkit-text-stroke: 2px #b6bbc4;
   font-size: 10em;
   position: absolute;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -30%);
 `;
 
 export const H2Second = styled.h2`
   color: #f0ece5;
   font-size: 10em;
   position: absolute;
-  transform: translate(-50%, -160%);
+  transform: translate(-50%, -120%);
   animation: ${animate} 3s ease-in-out infinite;
 `;
 export const H2Second2 = styled.h2`
   color: #f0ece5;
   font-size: 10em;
   position: absolute;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -30%);
   animation: ${animate} 3s ease-in-out infinite;
 `;
 /** ------------------------------------------ */
@@ -242,6 +245,9 @@ export const Profile = styled.div`
     p {
       margin-top: 4px;
       color: #161a30;
+      a{
+        color: #161a30;
+      }
     }
   }
   div:nth-child(2) {
@@ -276,7 +282,7 @@ export const Skill = styled.div`
     width: 900px;
   }
   padding: 10px;
-  padding-top: 2%;
+  padding-top: 5%;
   height: 900px;
   .skill-border {
     border-top: 1px solid #161a30;
@@ -307,7 +313,7 @@ export const Skill = styled.div`
       flex-direction: column;
       align-items: center;
       p {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         color: #161a30;
       }
     }

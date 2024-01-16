@@ -4,6 +4,7 @@ const globalStyle = css`
   * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
   }
   body {
     background-color: #F0ECE5;

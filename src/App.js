@@ -88,17 +88,14 @@ function App() {
             <p> birthday : 1998. 06. 30</p>
             <p> Email : iym1511@naver.com</p>
             <p>
-              Git :
-              <a href="https://github.com/iym1511">
-                https://github.com/iym1511
-              </a>
+              Git : <a href="https://github.com/iym1511">https://github.com/iym1511</a>
             </p>
             <p>Notion : https://github.com/iym1511</p>
           </div>
           <div>
             <h1 {...profile}>
-              <span>"배움의 즐거움이 있는"</span> <br />
-              기록으로 발전하는 개발자
+              배움을 통해 <br />
+              <span>"지속적으로 발전하는"</span> 개발자
               <br />
               문일윤 입니다<span>.</span>
             </h1>
@@ -130,6 +127,7 @@ function App() {
             ))}
           </div>
         </div>
+
 
         <b className="back-end">Back-End & Version Control</b>
         <div {...skillUp2}>
