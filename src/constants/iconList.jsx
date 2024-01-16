@@ -12,16 +12,28 @@ export const frontAry = [
     label: "JavaScript",
   },
   {
-    img: [require("../img/react.png")],
-    label: "React",
-  },
-  {
     img: [require("../img/ts.png")],
     label: "TypeScript",
   },
   {
+    img: [require("../img/react.png")],
+    label: "React",
+  },
+  {
+    img: [require("../img/next.png")],
+    label: "NextJs",
+  },
+  {
     img: [require("../img/recoil.png")],
     label: "Recoil",
+  },
+  {
+    img: [require("../img/redux.png")],
+    label: "Redux-toolkit",
+  },
+  {
+    img: [require("../img/reactquery.png")],
+    label: "React-Query"
   },
   {
     img: [require("../img/graphql.png")],
@@ -32,13 +44,9 @@ export const frontAry = [
     label: "Style-Component",
   },
   {
-    img: [require("../img/redux.png")],
-    label: "Redux-toolkit",
-  },
-  {
-    img: [require("../img/reactquery.png")],
-    label: "React-Query"
-  },
+    img: [require("../img/emotion.png")],
+    label: "Emotion"
+  }
 ];
 
 export const backAry = [

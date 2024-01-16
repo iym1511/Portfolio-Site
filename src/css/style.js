@@ -289,11 +289,11 @@ export const Skill = styled.div`
     margin-bottom: 30px;
   }
   h1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #161a30;
   }
   .front-end {
-    margin-top: 35px;
+    margin-top: 30px;
     color: #33699a;
     font-size: 20px;
   }
