@@ -2,6 +2,7 @@ import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const NavBar = styled.nav`
+  font-family: "SUIT-Regular";
   display: flex;
   justify-content: space-between;
   mix-blend-mode: difference;
@@ -62,18 +63,6 @@ export const NavBar = styled.nav`
       }
     }
   }
-`;
-
-export const CardSection = styled.section`
-  display: flex;
-  justify-content: center;
-`;
-export const Div1 = styled.div`
-  width: 300px;
-  height: 300px;
-  border: 10px solid black;
-  margin: 0 10px;
-  background-color: red;
 `;
 
 const animate = keyframes`
@@ -209,7 +198,7 @@ export const Circle = styled.div`
   ); // 마우스 위치로 이동합니다.
 `;
 
-export const MyInfo = styled.div`
+export const MyInfo = styled.section`
   width: 1200px;
   height: 700px;
   // 1286px 부터 퍼센트 반응형
@@ -226,7 +215,7 @@ export const MyInfo = styled.div`
   padding: 60px;
   /* padding-top: 9%; */
   padding-top: 130px;
-  img {
+  .myinfo-img {
     width: 400px;
     height: 550px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -240,17 +229,27 @@ export const Profile = styled.div`
   div:nth-child(1) {
     padding: 15px;
     h1 {
+      font-family: "TheJamsil5Bold", sans-serif;
       margin-bottom: 20px;
       span {
         color: #161a30db;
-        font-size: 25px;
+        font-size: 20px;
       }
     }
     p {
+      font-family: "SUIT-Regular";
       margin-top: 4px;
       color: #161a30;
       a {
         color: #161a30;
+        font-weight: bolder;
+      }
+      .profile-icon {
+        position: relative;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
       }
     }
   }
@@ -260,10 +259,12 @@ export const Profile = styled.div`
     /* width: 80%; */
     h1,
     p {
+      font-family: "SUIT-Regular";
       padding: 15px;
       line-height: 1.5;
     }
     h1 {
+      font-family: "TheJamsil5Bold", sans-serif;
       span {
         color: #846f2f;
       }
@@ -276,7 +277,8 @@ export const Profile = styled.div`
   }
 `;
 
-export const Skill = styled.div`
+export const Skill = styled.section`
+  font-family: "SUIT-Regular";
   width: 1200px;
   margin: auto;
   @media (max-width: 1286px) {
@@ -321,6 +323,107 @@ export const Skill = styled.div`
         margin-bottom: 10px;
         color: #161a30;
       }
+    }
+  }
+`;
+
+export const Portfolio = styled.section`
+  /* display: flex; */
+  background: linear-gradient(#ffd68dbd -60%, #f0ece5);
+  /* border: 1px solid red; */
+  height: 1900px;
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    height: 900px;
+  }
+  div {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    margin: 3%;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    img {
+      width: 350px;
+      border-radius: 10px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    h1 {
+      font-family: "SUIT-Regular";
+      /* border: 1px solid red; */
+      padding: 15px 30px;
+      font-size: 1.4em;
+      span {
+        margin-left: 20px;
+        font-size: 15px;
+        font-weight: lighter;
+      }
+    }
+  }
+`;
+
+// export const CardSection = styled.section`
+//   display: flex;
+//   justify-content: center;
+// `;
+// export const Div1 = styled.div`
+//   width: 300px;
+//   height: 300px;
+//   border: 10px solid black;
+//   margin: 0 10px;
+// `;
+
+export const Contents = styled.section`
+  color: #444;
+  font-family: "SUIT-Regular";
+  border: 1px solid green;
+  .content {
+    display: flex;
+    justify-content: center;
+    width: 100dvw;
+    height: 80dvh;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* border: 1px solid blue; */
+    .card-1 {
+      width: 600px;
+      height: 700px;
+      border: 1px solid pink;
+      .card-1-section {
+        padding: 15px 20px;
+        h1 {
+        span {
+          margin-left: 20px;
+          font-size: 17px;
+          font-weight: lighter;
+          color: #666;
+        }
+      }
+      h3 {
+        margin-top: 20px;
+        
+      }
+      p{
+        margin-top: 10px;
+        font-weight: lighter;
+        color: #666;
+      }
+      }
+
+    }
+    .card-2 {
+      width: 1000px;
+      height: 700px;
+      border: 1px solid purple;
+    }
+    img {
+      width: 100%;
     }
   }
 `;

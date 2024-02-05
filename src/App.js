@@ -4,6 +4,7 @@ import {
   CardSection,
   Circle,
   Content,
+  Contents,
   Div1,
   H2First,
   H2First2,
@@ -13,6 +14,7 @@ import {
   Mousey,
   MyInfo,
   NavBar,
+  Portfolio,
   Profile,
   ScrollDowns,
   Scroller,
@@ -22,14 +24,16 @@ import globalStyle from "./css/globalStyle";
 import { Global } from "@emotion/react";
 import useMouseMove from "./hooks/useMouseMove";
 import { backAry, frontAry } from "./constants/iconList";
+import { projectList } from "./constants/projectList";
 
 function App() {
-
   const skillUp1 = useScrollFadeIn("up", 1, 0);
   const skillUp2 = useScrollFadeIn("up", 1, 0.1);
-  const card1 = useScrollFadeIn("left", 1, 0);
-  const card2 = useScrollFadeIn("left", 1, 0.2);
-  const card3 = useScrollFadeIn("left", 1, 0.4);
+  const cardAnimations = [
+    useScrollFadeIn("left", 1, 0),
+    useScrollFadeIn("left", 1, 0.2),
+    useScrollFadeIn("left", 1, 0.4),
+  ];
   const profile = useScrollFadeIn("right", 1, 0);
   const profile2 = useScrollFadeIn("right", 1, 0.1);
   const profile3 = useScrollFadeIn("right", 1, 0.2);
@@ -38,6 +42,7 @@ function App() {
     home: useRef(null),
     myInfo: useRef(null),
     skill: useRef(null),
+    portfolio: useRef(null),
   };
 
   const handleScroll = (section) => {
@@ -59,7 +64,7 @@ function App() {
         <div>
           <p onClick={() => handleScroll("myInfo")}>MY INFO</p>
           <p onClick={() => handleScroll("skill")}>SKILL</p>
-          <p>PORTFOLIO</p>
+          <p onClick={() => handleScroll("portfolio")}>PORTFOLIO</p>
           <p>ABOUT</p>
         </div>
       </NavBar>
@@ -77,21 +82,40 @@ function App() {
           </Mousey>
         </ScrollDowns>
       </MainSection>
-      
+
       {/* 내정보 */}
       <MyInfo ref={sectionRefs.myInfo}>
-        <img src={require("./img/my.jpeg")}></img>
+        <img src={require("./img/my.jpeg")} className="myinfo-img"></img>
         <Profile>
           <div>
             <h1>
               문일윤 <span>MOON IL YUN</span>
             </h1>
-            <p> birthday : 1998. 06. 30</p>
-            <p> Email : iym1511@naver.com</p>
             <p>
-              Git : <a href="https://github.com/iym1511">https://github.com/iym1511</a>
+              <img
+                src={require("./img/birthday.png")}
+                className="profile-icon"
+              />
+              birthday : 1998. 06. 30
             </p>
-            <p>Notion : https://github.com/iym1511</p>
+            <p>
+              <img src={require("./img/email.png")} className="profile-icon" />
+              Email : iym1511@naver.com
+            </p>
+            <p>
+              <img src={require("./img/github.png")} className="profile-icon" />
+              Git :{" "}
+              <a href="https://github.com/iym1511">
+                https://github.com/iym1511
+              </a>
+            </p>
+            <p>
+              <img src={require("./img/notion.png")} className="profile-icon" />
+              Notion :{" "}
+              <a href="https://github.com/iym1511">
+                https://github.com/iym1511
+              </a>
+            </p>
           </div>
           <div>
             <h1 {...profile}>
@@ -121,7 +145,7 @@ function App() {
           <b className="front-end">Front-End</b>
           <div {...skillUp1}>
             {frontAry.map((a, i) => (
-              <div className="icon-list">
+              <div className="icon-list" key={i}>
                 <img src={a.img} />
                 <p>{a.label}</p>
               </div>
@@ -129,11 +153,10 @@ function App() {
           </div>
         </div>
 
-
         <b className="back-end">Back-End & Version Control</b>
         <div {...skillUp2}>
           {backAry.map((a, i) => (
-            <div className="icon-list">
+            <div className="icon-list" key={i}>
               <img src={a.img} />
               <p>{a.label}</p>
             </div>
@@ -141,12 +164,41 @@ function App() {
         </div>
       </Skill>
 
-      <CardSection id="special">
-        <Div1 {...card1} id="special"></Div1>
-        <Div1 {...card2} id="special"></Div1>
-        <Div1 {...card3} id="special"></Div1>
-      </CardSection>
+      {/* 포트폴리오 */}
+      <Portfolio>
+        <article ref={sectionRefs.portfolio}>
+          {projectList.map((a, i) => (
+            <div {...cardAnimations[i % cardAnimations.length]} key={i}>
+              <img src={a.image} />
+              <h1>
+                {a.title}
+                <span>{a.tag}</span>
+              </h1>
+            </div>
+          ))}
+        </article>
+      </Portfolio>
 
+      <Contents>
+        {projectList.map((a, i) => (
+          <div className="content">
+            <div className="card-1">
+              <img src={a.image} />
+              <div className="card-1-section">
+                <h1>
+                  {a.title}
+                  <span>{a.tag}</span>
+                </h1>
+                <h3>기술스택</h3>
+                <p>{a.techstack}</p>
+              </div>
+            </div>
+            <div className="card-2"></div>
+          </div>
+        ))}
+      </Contents>
+
+      {/* 글로벌 css적용 */}
       <Global styles={globalStyle} />
     </div>
   );
