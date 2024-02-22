@@ -65,7 +65,6 @@ function App() {
           <p onClick={() => handleScroll("myInfo")}>MY INFO</p>
           <p onClick={() => handleScroll("skill")}>SKILL</p>
           <p onClick={() => handleScroll("portfolio")}>PORTFOLIO</p>
-          <p>ABOUT</p>
         </div>
       </NavBar>
       {/* 상단 메인 */}
