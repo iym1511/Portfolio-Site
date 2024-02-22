@@ -21,7 +21,8 @@ const globalStyle = css`
     text-decoration: none;
   }
   body {
-    background-color: #f0ece5;
+    /* background-color: #f0ece5; */
+    background: linear-gradient(#ffd68dbd -60%, #f0ece5);
     overflow-x: hidden; // ScrollFadeIn이 left로 이루어 질 때 나타나는 x축 스크롤 바 를 없애줌
   }
 `;

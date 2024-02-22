@@ -165,7 +165,7 @@ function App() {
       </Skill>
 
       {/* 포트폴리오 */}
-      <Portfolio>
+      {/* <Portfolio>
         <article ref={sectionRefs.portfolio}>
           {projectList.map((a, i) => (
             <div {...cardAnimations[i % cardAnimations.length]} key={i}>
@@ -177,11 +177,12 @@ function App() {
             </div>
           ))}
         </article>
-      </Portfolio>
+      </Portfolio> */}
 
-      <Contents>
+      <Contents ref={sectionRefs.portfolio}>
+        <h1 className="card-title">📋 PORTFOLIO</h1>
         {projectList.map((a, i) => (
-          <div className="content">
+          <div className="content" key={i}>
             <div className="card-1">
               <img src={a.image} />
               <div className="card-1-section">
@@ -191,9 +192,47 @@ function App() {
                 </h1>
                 <h3>기술스택</h3>
                 <p>{a.techstack}</p>
+                <h3>배포 링크</h3>
+                <a href={a.link} target="_blank">
+                  {a.link}
+                </a>
+                <h3>레파지토리</h3>
+                <a href={a.repositories} target="_blank">
+                  {a.repositories}
+                </a>
               </div>
             </div>
-            <div className="card-2"></div>
+            <div className="card-2">
+              <div className="card-2-section">
+                <h3 className="card-2-pjtitle">프로젝트 소개</h3>
+                <p>
+                  프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개 프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개
+                  프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개 프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개
+                </p>
+                <p>
+                  프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개 프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개
+                  프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트
+                </p>
+                <h3 className="card-2-pjtitle">프로젝트 후기</h3>
+                <p>
+                  프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개 프로젝트 소개프로젝트 소개프로젝트
+                  소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개
+                  프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트
+                  프로젝트 소개프로젝트 소개프로젝트 소개프로젝트 소개프로젝트
+                </p>
+                <h3 className="card-2-pjtitle">구현 기능</h3>
+                <p>{a.function}</p>
+              </div>
+            </div>
           </div>
         ))}
       </Contents>

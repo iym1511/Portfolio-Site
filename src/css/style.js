@@ -379,48 +379,106 @@ export const Portfolio = styled.section`
 // `;
 
 export const Contents = styled.section`
+  /* background: linear-gradient(#ffd68dbd -60%, #f0ece5); */
   color: #444;
   font-family: "SUIT-Regular";
-  border: 1px solid green;
+  .card-title {
+    @media (max-width: 1046px) {
+      width: 80dvw;
+    }
+    color: black;
+    border-bottom: 1px solid black;
+    width: 90dvw;
+    margin: auto;
+    position: relative;
+    top: 70px;
+    padding-bottom: 20px;
+  }
   .content {
+    @media (max-width: 1286px) {
+      display: flex;
+      flex-direction: column;
+    }
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100dvw;
-    height: 80dvh;
-    /* margin: auto; */
-    margin-top: 100px;
+    margin-top: 120px;
     margin-bottom: 100px;
     /* border: 1px solid blue; */
+
     .card-1 {
+      @media (max-width: 1286px) {
+        width: 60%;
+        margin: 0px;
+        a:last-child {
+          margin-bottom: 20px;
+        }
+      }
       width: 600px;
-      height: 700px;
-      border: 1px solid pink;
+      /* height: 700px; */
+      margin-left: 50px;
+      margin-bottom: 100px;
+      /* border: 1px solid pink; */
+      height: fit-content;
       .card-1-section {
+        @media (max-width: 1286px) {
+          margin-top: 20px;
+          padding: 0;
+        }
         padding: 15px 20px;
-        h1 {
-        span {
+        h1 > span {
           margin-left: 20px;
           font-size: 17px;
           font-weight: lighter;
           color: #666;
         }
+        h3 {
+          @media (max-width: 1286px) {
+            margin-top: 15px;
+          }
+          margin-top: 20px;
+        }
+        p,
+        a {
+          display: inline-block;
+          margin-top: 1px;
+          font-weight: lighter;
+          color: #666;
+        }
       }
-      h3 {
+    }
+    .card-2 {
+      @media (max-width: 1286px) {
+        /* border: 1px solid red; */
+        width: 70%;
+        height: 500px;
+      }
+      width: 800px;
+      height: 700px;
+      /* border: 1px solid purple; */
+      .card-2-section {
+        @media (max-width: 1286px) {
+          padding: 0px;
+          margin: auto;
+          margin-top: 20px;
+        }
+        width: 87%;
+        padding: 50px;
+      }
+      .card-2-pjtitle {
+        @media (max-width: 1286px) {
+          margin-top: 0px;
+        }
+        font-size: 1.4rem;
         margin-top: 20px;
-        
       }
-      p{
+      p {
         margin-top: 10px;
         font-weight: lighter;
         color: #666;
+        margin-bottom: 20px;
       }
-      }
-
-    }
-    .card-2 {
-      width: 1000px;
-      height: 700px;
-      border: 1px solid purple;
     }
     img {
       width: 100%;
