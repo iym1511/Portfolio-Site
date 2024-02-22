@@ -115,6 +115,10 @@ function App() {
                 https://github.com/iym1511
               </a>
             </p>
+            <p>
+              <img src={require("./img/Certificate.png")} className="profile-icon"/>
+              Certificate : (현) 정보처리기사 필기합격 실기 진행중
+            </p>
           </div>
           <div>
             <h1 {...profile}>
