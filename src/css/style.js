@@ -469,9 +469,11 @@ export const Contents = styled.section`
       .card-2-pjtitle {
         @media (max-width: 1286px) {
           margin-top: 0px;
+          border-bottom: 1px solid #929292;
         }
         font-size: 1.4rem;
         margin-top: 20px;
+        padding-bottom: 5px;
       }
       p {
         margin-top: 10px;
