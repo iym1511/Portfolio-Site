@@ -111,8 +111,8 @@ function App() {
             <p>
               <img src={require("./img/notion.png")} className="profile-icon" />
               Notion :{" "}
-              <a href="https://github.com/iym1511">
-                https://github.com/iym1511
+              <a href="https://fourth-ant-09a.notion.site/Moon-Log-0afee734338441df859369c5a780786b">
+              https://fourth-ant-09a.notion.site
               </a>
             </p>
             <p>
